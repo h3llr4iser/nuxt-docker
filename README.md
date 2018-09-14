@@ -1,4 +1,4 @@
-# Docker nuxt
+# Docker nuxt [![Build Status](https://travis-ci.org/h3llr4iser/nuxt-docker.svg?branch=master)](https://travis-ci.org/h3llr4iser/nuxt-docker)
 
 > Docker Nuxt.js project
 
