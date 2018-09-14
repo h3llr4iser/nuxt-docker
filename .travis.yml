@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t h3llr4iser/docker-nuxt -f Dockerfile.dev .
+
+script:
+  - docker run h3llr4iser/docker-nuxt yarn test
