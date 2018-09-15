@@ -7,3 +7,17 @@ before_install:
 
 script:
   - docker run h3llr4iser/docker-nuxt yarn test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-1"
+  app: "docker-nuxt"
+  env: "DockerNuxt-env"
+  bucket_name: "elasticbeanstalk-eu-west-1-725101668907"
+  bucket_path: "docker-nuxt"
+  on:
+    branch: master
+
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
