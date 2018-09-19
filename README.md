@@ -2,7 +2,18 @@
 
 > Docker Nuxt.js project
 
-Nuxt application containerized with docker for testing purposes.
+Nuxt application containerized with docker for testing purposes. This app is configured to deploy to AWS elastic beanstalk with travis. 
+
+You have to create some environment variables in travis to connect to AWS for uploading the app and to connect to docker hub to create images. 
+
+Push request to github -> travis execute some test -> travis upload the app to AWS elastic beanstalk -> elastic beanstalk create the containers.
+
+```
+AWS_ACCESS_KEY
+AWS_SECRET_KEY
+DOCKER_ID
+DOCKER_PASSWORD
+```
 
 **To build the docker image**
 
