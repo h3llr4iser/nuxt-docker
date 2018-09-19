@@ -1,0 +1,33 @@
+{
+    "AWSEBDockerrunVersion" : 2,
+    "containerDefinitions" : [
+        {
+            "name": "web",
+            "image": "h3llr4iser/nuxt-web",
+            "hostname": "web",
+            "essential": false,
+            "memory": 128
+        },
+        {
+            "name": "test",
+            "image": "h3llr4iser/nuxt-test",
+            "hostname": "test",
+            "essential": false,
+            "memory": 128
+        },
+        {
+            "name": "nginx",
+            "image": "h3llr4iser/nuxt-nginx",
+            "hostname": "nginx",
+            "essential": true,
+            "portMappings": [
+               {
+                   "hostPort": "80",
+                   "containerPort": "80"
+               } 
+            ],
+            "links": ["web"],
+            "memory": 128
+        }
+    ]
+}

@@ -19,3 +19,11 @@ services:
       - /myapp/node_modules
       - .:/myapp    
     command: ["yarn", "watch:test"]
+
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - "3050:80"    
