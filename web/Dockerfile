@@ -1,11 +1,11 @@
 FROM node:9.4.0-alpine
 
-WORKDIR /myapp
+WORKDIR '/app'
 
-COPY ./package.json /myapp
+COPY ./package.json ./
 RUN npm install
 
-COPY . /myapp
+COPY . .
 
 RUN apk add --no-cache bash
 

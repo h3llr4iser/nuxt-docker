@@ -1,12 +1,11 @@
 FROM node:9.4.0-alpine
 
-WORKDIR /myapp
+WORKDIR '/app'
 
-COPY ./package.json /myapp
+COPY ./package.json ./
 RUN npm install
 
-COPY . /myapp
-
+COPY . .
 ENV HOST 0.0.0.0
 EXPOSE 3000
 

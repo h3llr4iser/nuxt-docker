@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     build: 
-      context: .
+      context: ./web
       dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
@@ -11,7 +11,7 @@ services:
       - .:/myapp
   tests:
     build: 
-      context: .
+      context: ./web
       dockerfile: Dockerfile.dev
     ports:
       - "4000:4000"

@@ -8,6 +8,15 @@ before_install:
 script:
   - docker run h3llr4iser/docker-nuxt yarn test
 
+after_success:
+  - docker build -t h3llr4iser/nuxt-web .
+  - docker build -t h3llr4iser/nuxt-nginx ./nginx
+
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push h3llr4iser/nuxt-web
+  - docker push h3llr4iser/nuxt-nginx
+ 
+
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-1"
