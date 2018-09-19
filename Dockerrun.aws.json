@@ -2,9 +2,9 @@
     "AWSEBDockerrunVersion" : 2,
     "containerDefinitions" : [
         {
-            "name": "client-web",
+            "name": "client",
             "image": "h3llr4iser/nuxt-web",
-            "hostname": "web",
+            "hostname": "client",
             "essential": false,
             "memory": 128
         
@@ -20,7 +20,7 @@
                    "containerPort": "80"
                } 
             ],
-            "links": ["client-web"],
+            "links": ["client"],
             "memory": 128
         }
     ]
