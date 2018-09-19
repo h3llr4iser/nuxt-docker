@@ -16,13 +16,6 @@
             
         },
         {
-            "name": "test",
-            "image": "h3llr4iser/nuxt-test",
-            "hostname": "test",
-            "essential": false,
-            "memory": 128
-        },
-        {
             "name": "nginx",
             "image": "h3llr4iser/nuxt-nginx",
             "hostname": "nginx",
