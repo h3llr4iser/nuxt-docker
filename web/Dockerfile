@@ -11,4 +11,6 @@ RUN apk add --no-cache bash
 ENV HOST 0.0.0.0
 EXPOSE 3000
 
-CMD ["/bin/bash", "./start.sh"]
+RUN yarn build
+
+CMD ["yarn", "start"]

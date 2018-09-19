@@ -5,14 +5,14 @@
             "name": "client",
             "image": "h3llr4iser/nuxt-web",
             "hostname": "client",
-            "essential": false,
+            "essential": true,
             "portMappings": [
                 {
                     "hostPort": "3000",
                     "containerPort": "3000"
                 } 
             ],
-            "memory": 4096
+            "memory": 15000
         
         },
         {
