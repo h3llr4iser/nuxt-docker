@@ -7,8 +7,8 @@ services:
     ports:
       - "3000:3000"
     volumes: 
-      - /myapp/node_modules
-      - .:/myapp
+      - /app/node_modules
+      - .:/app
   tests:
     build: 
       context: ./web
@@ -16,14 +16,13 @@ services:
     ports:
       - "4000:4000"
     volumes: 
-      - /myapp/node_modules
-      - .:/myapp    
+      - /app/node_modules
+      - .:/app    
     command: ["yarn", "watch:test"]
-
   nginx:
     restart: always
     build:
       dockerfile: Dockerfile.dev
       context: ./nginx
     ports:
-      - "3050:80"    
+      - "81:80"    

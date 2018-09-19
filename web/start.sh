@@ -3,4 +3,4 @@ set -e
 set -x
 
 yarn build
-yarn start
+yarn start --universal
