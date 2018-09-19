@@ -6,7 +6,14 @@
             "image": "h3llr4iser/nuxt-web",
             "hostname": "web",
             "essential": false,
+            "portMappings": [
+                {
+                    "hostPort": "3000",
+                    "containerPort": "3000"
+                } 
+            ],
             "memory": 128
+            
         },
         {
             "name": "test",
